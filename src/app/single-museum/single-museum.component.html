@@ -1,19 +1,20 @@
 <div>
   <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{nameOfMuseum}}</h5>
-    <p class="card-text">📍 {{museumAdress}}</p>
-    <p class="card-text">{{museumZip}}</p>
-    <p class="card-text">
-      <a href="{{phone}}">☎️ {{museumPhone}}</a>
-    </p>
-    <p class="card-text">
-      <a href="{{site}}" target="_blank">🔗 {{museumSite}}</a>
-    </p>
-    <p class="card-text">
-      ℹ️ {{museumOpening | slice : 0:100}} (...)<br>
-      <a routerLink="museum/{{museumId}}">View details</a>
-    </p>
+    <div class="card-body">
+      <h5 class="card-title">{{nameOfMuseum}}</h5>
+      <p class="card-text">📍 {{museumAdress}}</p>
+      <p class="card-text">{{museumZip}}</p>
+      <p class="card-text">{{ville}}</p>
+      <p class="card-text">
+        <a href="{{phone}}">☎️ {{museumPhone}}</a>
+      </p>
+      <p class="card-text">
+        <a href="{{site}}" target="_blank">🔗 {{museumSite}}</a>
+      </p>
+      <p class="card-text">
+        ℹ️ {{museumOpening | slice : 0:100}} (...)<br>
+        <a routerLink="museum/{{museumRef}}">View details</a>
+      </p>
+    </div>
   </div>
-</div>
 </div>

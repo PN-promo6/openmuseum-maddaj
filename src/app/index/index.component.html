@@ -5,16 +5,10 @@
     </div>
 
     <div class="row">
-      <app-single-museum class="col-md-4"
-      *ngFor= "let museum of museums"
-      [nameOfMuseum]="museum.nom_du_musee"
-      [museumId]="museum.id"
-      [museumAdress]="museum.adr"
-      [museumZip]="museum.cp"
-      [museumPhone]="museum.telephone"
-      [museumSite]="museum.siteweb"
-      [museumOpening]="museum.periode_ouverture"
-      ></app-single-museum>
+      <app-single-museum class="col-md-4" *ngFor="let museum of museums" [nameOfMuseum]="museum.nom_du_musee"
+        [museumRef]="museum.ref_musee" [museumAdress]="museum.adr" [museumZip]="museum.cp" [ville]="museum.ville"
+        [museumPhone]="museum.telephone" [museumSite]="museum.siteweb" [museumOpening]="museum.periode_ouverture">
+      </app-single-museum>
     </div>
 
   </div>
