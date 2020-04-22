@@ -1,62 +1,19 @@
-<article class="card mb-3 shadow-sm">
+<div>
+  <div class="card">
   <div class="card-body">
-    <div class="card-title">
-      <h2 class="h4 mb-3">{{museumName}}</h2>
-    </div>
-
-    <div class="">
-      <!-- PHOTO -->
-    </div>
-    <!-- Localisation -->
-    <div class="row mb-2">
-      <div class="col-1">
-        📍
-      </div>
-      <div class="col-10">
-        <p class="card-text">
-          {{museumAdress}}<br>
-          {{museumZipCode}} {{museumCity | titlecase}}
-        </p>
-      </div>
-    </div>
-    <!-- Phone -->
-    <div class="row mb-2">
-      <div class="col-1">
-        📞
-      </div>
-      <div class="col-10">
-        <p class="card-text"><a href="tel:{{museumPhone}}">{{museumPhone}}</a></p>
-      </div>
-    </div>
-    <!-- Website -->
-    <div class="row mb-2">
-      <div class="col-1">
-        💻
-      </div>
-      <div class="col-10">
-        <p class="card-text">
-          <a href="https://{{museumWebSite}}" target="blank">{{museumWebSite}}</a>
-        </p>
-      </div>
-    </div>
-    <!-- Opening hours -->
-    <div class="row mb-2">
-      <div class="col-1">
-        🕒
-      </div>
-      <div class="col-10">
-        <p class="card-text">{{museumOpening}}</p>
-      </div>
-    </div>
-    <!-- View detail -->
-    <div class="row mb-2">
-      <div class="col-1">
-        ➕
-      </div>
-      <div class="col-10">
-        <p class="card-text"><a href="#">View details</a></p>
-      </div>
-    </div>
-
+    <h5 class="card-title">{{nameOfMuseum}}</h5>
+    <p class="card-text">📍 {{museumAdress}}</p>
+    <p class="card-text">{{museumZip}}</p>
+    <p class="card-text">
+      <a href="{{phone}}">☎️ {{museumPhone}}</a>
+    </p>
+    <p class="card-text">
+      <a href="{{site}}" target="_blank">🔗 {{museumSite}}</a>
+    </p>
+    <p class="card-text">
+      ℹ️ {{museumOpening | slice : 0:100}} (...)<br>
+      <a routerLink="museum/{{museumId}}">View details</a>
+    </p>
   </div>
-</article>
+</div>
+</div>

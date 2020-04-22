@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "openmuseum": {
+    "openMuseum": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/openmuseum",
+            "outputPath": "dist/openMuseum",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,8 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "openmuseum:build"
+            "browserTarget": "openMuseum:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "openmuseum:build:production"
+              "browserTarget": "openMuseum:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "openmuseum:build"
+            "browserTarget": "openMuseum:build"
           }
         },
         "test": {
@@ -94,8 +94,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -121,15 +121,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "openmuseum:serve"
+            "devServerTarget": "openMuseum:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "openmuseum:serve:production"
+              "devServerTarget": "openMuseum:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "openmuseum"
+  "defaultProject": "openMuseum"
 }

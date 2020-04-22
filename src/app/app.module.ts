@@ -3,22 +3,29 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-// Service contenant le JSON de tous les musées et les méthodes associées
-import { MuseumListService } from './services/museumList.service';
-// Liste des musée : inclue SingleMuseumComponent
-import { MuseumListComponent } from './museum-list/museum-list.component';
-// Un musée dans la liste
 import { SingleMuseumComponent } from './single-museum/single-museum.component';
+import { MuseumListService } from './services/museumList.service';
+import { IndexComponent } from './index/index.component';
+import { AddMuseumComponent } from './add-museum/add-museum.component';
+import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 const appRoutes:Routes = [
-  {path: '', component: MuseumListComponent}
+  {path:'add', component: AddMuseumComponent},
+  {path:'museum/:id', component: MuseumDetailComponent},
+  {path:'', component: IndexComponent},
+  {path:'not-found', component: NotFoundComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleMuseumComponent,
-    MuseumListComponent,
+    IndexComponent,
+    AddMuseumComponent,
+    MuseumDetailComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
