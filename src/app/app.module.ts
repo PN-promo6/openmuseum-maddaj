@@ -9,6 +9,7 @@ import { IndexComponent } from './index/index.component';
 import { AddMuseumComponent } from './add-museum/add-museum.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   { path: 'add', component: AddMuseumComponent },
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     AddMuseumComponent,
     MuseumDetailComponent,
     NotFoundComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
