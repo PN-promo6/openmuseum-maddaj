@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-
 import { AppComponent } from './app.component';
 import { SingleMuseumComponent } from './single-museum/single-museum.component';
 import { MuseumListService } from './services/museumList.service';
@@ -30,8 +28,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    LeafletModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [MuseumListService],
   bootstrap: [AppComponent]
